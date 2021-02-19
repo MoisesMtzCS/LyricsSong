@@ -1,10 +1,9 @@
 package cs.med.mtz.moises.lyricss.songAdapter
 
-import android.content.Context
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import cs.med.mtz.moises.lyricss.databinding.ViewHolderSongBinding
 import cs.med.mtz.moises.lyricss.songAdapter.domain.entity.Song
 
@@ -28,7 +27,12 @@ class SongAdapter(
     }
 
     override fun onBindViewHolder(holder: SongViewHolder, position: Int) {
-        val song:Song =songs[position]
+        val song: Song = songs[position]
         holder.binding.tvTitle.text = song.title
+        Glide.with(holder.itemView)
+            .load(song.imageUrl)
+            .into(holder.binding.ivCover)
+
+
     }
 }
