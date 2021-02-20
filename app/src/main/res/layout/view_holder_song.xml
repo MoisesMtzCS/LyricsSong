@@ -32,7 +32,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="5dp"
                 android:textColor="@color/black"
-                tools:text="Pxndx" />
+                tools:text="Nana pancha" />
         </LinearLayout>
 
     </androidx.cardview.widget.CardView>

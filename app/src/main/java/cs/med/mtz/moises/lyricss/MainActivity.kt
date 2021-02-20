@@ -17,7 +17,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var mainViewModel: LoadSongsViewModel
     /* */
 
-    val binding: ActivityMainBinding by lazy { ActivityMainBinding.inflate(layoutInflater) }
+    private val binding: ActivityMainBinding by lazy { ActivityMainBinding.inflate(layoutInflater) }
 
     private val value: String
         get() = binding.valueText.text.toString()
@@ -33,6 +33,7 @@ class MainActivity : AppCompatActivity() {
         setupSongsRecyclerView()
         observeViewModel()
         searchOnClick()
+
 
     }
 
